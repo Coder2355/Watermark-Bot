@@ -46,15 +46,19 @@ async def HelpWatermark(bot, cmd):
 			f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
 		)
 	if Config.UPDATES_CHANNEL:
-		fsub = await handle_force_subscribe(bot, cmd)
-		if fsub == 400:
-			return
-	await cmd.reply_text(
-		text=Config.USAGE_WATERMARK_ADDER,
-		parse_mode="Markdown",
-		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/AbirHasan2005"), InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")], [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")], [InlineKeyboardButton("Source Code", url="https://github.com/AbirHasan2005/Watermark-Bot")]]),
-		disable_web_page_preview=True
-	)
+            fsub = await handle_force_subscribe(bot, cmd)
+            if fsub == 400:
+                return
+        await cmd.reply_text(
+            text=Config.USAGE_WATERMARK_ADDER,
+            parse_mode="MarkdownV2",  # Change from "Markdown" to "MarkdownV2"
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("Developer", url="https://t.me/AbirHasan2005"), InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")],
+                [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
+                [InlineKeyboardButton("Source Code", url="https://github.com/AbirHasan2005/Watermark-Bot")]
+            ]),
+            disable_web_page_preview=True
+        )
 
 
 @AHBot.on_message(filters.command(["reset"]) & filters.private)
