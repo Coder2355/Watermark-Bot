@@ -45,7 +45,7 @@ async def HelpWatermark(bot, cmd):
 			Config.LOG_CHANNEL,
 			f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
 		)
-	if Config.UPDATES_CHANNEL:
+        if Config.UPDATES_CHANNEL:
             fsub = await handle_force_subscribe(bot, cmd)
             if fsub == 400:
                 return
