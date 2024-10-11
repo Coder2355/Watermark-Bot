@@ -8,19 +8,19 @@ import os
 
 
 class Config(object):
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-	API_ID = int(os.environ.get("API_ID", ""))
-	API_HASH = os.environ.get("API_HASH", "")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "6610201435:AAHEv2YoM2ZEtlEdqjilv9mZGjT9Uzzrntw")
+	API_ID = int(os.environ.get("API_ID", "21740783"))
+	API_HASH = os.environ.get("API_HASH", "a5dc7fec8302615f5b441ec5e238cd46")
 	STREAMTAPE_API_PASS = os.environ.get("STREAMTAPE_API_PASS", "0")
 	STREAMTAPE_API_USERNAME = os.environ.get("STREAMTAPE_API_USERNAME", "0")
 	LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "0"))
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "0")
 	DOWN_PATH = os.environ.get("DOWN_PATH", "./downloads")
 	PRESET = os.environ.get("PRESET", "ultrafast")
-	OWNER_ID = int(os.environ.get("OWNER_ID", ""))
-	CAPTION = "By "
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
-	DATABASE_URL = os.environ.get("DATABASE_URL", "://")
+	OWNER_ID = int(os.environ.get("OWNER_ID", "6299192020"))
+	CAPTION = "By @Anime_warrior_Tamil"
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", "Yolhcyxiy_bot")
+	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Speedwolf1:speedwolf24689@cluster0.rgfywsf.mongodb.net/")
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
 	ALLOW_UPLOAD_TO_STREAMTAPE = bool(os.environ.get("ALLOW_UPLOAD_TO_STREAMTAPE", False))
 	USAGE_WATERMARK_ADDER = """
